@@ -1,0 +1,10 @@
+.bottom-navigation-container {
+    display: flex;
+    border: 1px solid aqua;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    transform: translateY(-50%);
+    top: 100%;
+}
