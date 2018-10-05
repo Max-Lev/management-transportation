@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import MiniDrawer from './layout/side-nav.layout';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { createMuiTheme } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+
+const theme = createMuiTheme({
+
+  palette: {
+    primary: {
+      main: '#212121',
+    },
+    secondary: purple
+  }
+});
+
 class App extends Component {
+
   render() {
+
     return (
       <div className="App">
-        {/* <Router> */}
+        <MuiThemeProvider  theme={theme}>
           <MiniDrawer></MiniDrawer>
-        {/* </Router> */}
+        </MuiThemeProvider>
       </div>
     );
   }

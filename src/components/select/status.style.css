@@ -1,0 +1,13 @@
+.root {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    min-width: 120px;
+    max-width: 300px;
+}
+
+.formControl {
+    display: flex;
+    flex: 1;
+    max-width: 100%;
+}

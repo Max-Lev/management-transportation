@@ -15,7 +15,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { navigationList_A } from './nav-items';
 import { styles } from './styles';
 import './styles.css';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { AppRoutes } from './../routes/routes';
 
 class MiniDrawer extends React.Component {
@@ -32,11 +32,13 @@ class MiniDrawer extends React.Component {
     };
 
     render() {
+        
         const { classes, theme } = this.props;
 
         return (
             <Router>
-                <div className={classes.root}>
+
+                <section className={classes.root}>
 
                     <AppBar position="absolute" className={classNames(classes.appBar, this.state.open && classes.appBarShift)}>
                         <Toolbar disableGutters={!this.state.open}>
@@ -71,8 +73,9 @@ class MiniDrawer extends React.Component {
                     </Drawer>
 
                     <main className={classes.content}>
+
                         <div className={classes.toolbar} />
-                        <Typography noWrap>{'You think water moves fast? You should see ice.'}</Typography>
+
                         <section>
 
                             <Switch>
@@ -84,8 +87,11 @@ class MiniDrawer extends React.Component {
                             </Switch>
 
                         </section>
+
                     </main>
-                </div >
+
+                </section>
+
             </Router>
         );
     }
