@@ -1,5 +1,5 @@
-import DashboardView from '../views/dashboard.view';
-import ActiveView from '../views/active.view';
+import DashboardView from '../views/dashboard/dashboard.view';
+import ActiveView from '../views/active/active.view';
 
 export class RoutesModel {
     constructor(path, component, title) {
@@ -9,8 +9,12 @@ export class RoutesModel {
     }
 }
 export const AppRoutes = [
-    { ... new RoutesModel('/', DashboardView, 'Dashboard') },
-    { ... new RoutesModel('/Active', ActiveView, 'Active') }
+    {
+        ...new RoutesModel('/', DashboardView, 'Dashboard')
+    },
+    {
+        ...new RoutesModel('/Active', ActiveView, 'Active')
+    }
 ];
 
 console.log(AppRoutes)
