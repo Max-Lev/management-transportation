@@ -21,3 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 management-transportation/server/serviceAccountKey.json
+server/management-transportation-firebase-adminsdk-o1hkj-1754ec30e4\.json
