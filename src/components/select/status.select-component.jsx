@@ -7,7 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import './status.style.css';
-
+import axios from 'axios';
 const styles = theme => ({});
 const ITEM_HEIGHT = 48;
 const ITEM_PADDING_TOP = 8;
@@ -23,10 +23,14 @@ const MenuProps = {
 
 class StatusSelectComponent extends React.Component {
 
+    componentDidMount() {
+
+    };
+
     render() {
 
-        const { classes, theme } = this.props;
-        
+        const { theme } = this.props;
+
         return (
 
             <div className="root">
@@ -45,8 +49,7 @@ class StatusSelectComponent extends React.Component {
                             <MenuItem key={name} value={name}
                                 style={{
                                     fontWeight: this.props.employeeSelectedStatus.indexOf(name) === -1
-                                        ? theme.typography.fontWeightRegular
-                                        : theme.typography.fontWeightMedium
+                                        ? theme.typography.fontWeightRegular : theme.typography.fontWeightMedium
                                 }}>
                                 {name}
                             </MenuItem>

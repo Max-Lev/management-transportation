@@ -7,7 +7,9 @@ import StatusSelectComponent from '../select/status.select-component';
 import stylesTheme from './styles';
 import EmployeeActiveStatusList from './employee-active-status.data';
 import EmployeeRegistrationService from '../../services/employee-registration.service';
+// import { Formik } from 'formik';
 const styles = stylesTheme;
+
 const employeeStatusOptions = EmployeeActiveStatusList;
 
 const employeeRegistrationService = new EmployeeRegistrationService();
@@ -20,16 +22,9 @@ export class EmployeeRegistrationFormComponent extends React.Component {
         employeeSelectedStatus: []
     };
 
-    constructor() {
-        super();
-    };
-
-    componentDidMount() {
-
-    };
+    componentDidMount() { };
 
     setEmployeeName = (event) => {
-
         this.setState({ name: event.target.value }, () => {
             employeeRegistrationService.setState(this.state);
             console.log('setEmployeeName: ', this.state);
@@ -37,7 +32,6 @@ export class EmployeeRegistrationFormComponent extends React.Component {
     };
 
     eployeeStatusHandler = (event) => {
-
         this.setState({ employeeSelectedStatus: event.target.value }, () => {
             console.log(this.state)
         });
@@ -57,7 +51,8 @@ export class EmployeeRegistrationFormComponent extends React.Component {
             <form onSubmit={this.submitEmployee} className={classes.container} noValidate autoComplete="off" >
 
                 <FormControl className={classes.formControl} required={true}>
-                    <TextField id="standard-name" label="Name" className={classes.textField} value={this.state.name}
+                    <TextField id="standard-name" label="Name"
+                        className={classes.textField} value={this.state.name}
                         onChange={this.setEmployeeName} margin="normal" />
                 </FormControl>
 
@@ -67,7 +62,7 @@ export class EmployeeRegistrationFormComponent extends React.Component {
                     eployeeStatusHandler={this.eployeeStatusHandler}>
                 </StatusSelectComponent>
 
-            </form >
+            </form>
         )
     }
 }

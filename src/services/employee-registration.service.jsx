@@ -1,9 +1,7 @@
 export default class EmployeeRegistrationService {
 
-    constructor() {
-
-    };
-
+    // persistant user state between routes
+    
     stateModel = {
         name: '',
         employeeSelectedStatus: []

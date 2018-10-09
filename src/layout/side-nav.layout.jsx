@@ -32,7 +32,7 @@ class MiniDrawer extends React.Component {
     };
 
     render() {
-        
+
         const { classes, theme } = this.props;
 
         return (
@@ -76,8 +76,7 @@ class MiniDrawer extends React.Component {
 
                         <div className={classes.toolbar} />
 
-                        <section>
-
+                        <React.Fragment>
                             <Switch>
                                 {
                                     AppRoutes.map((item, index) => {
@@ -85,8 +84,7 @@ class MiniDrawer extends React.Component {
                                     })
                                 }
                             </Switch>
-
-                        </section>
+                        </React.Fragment>
 
                     </main>
 

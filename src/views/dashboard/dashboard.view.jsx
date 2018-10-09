@@ -1,11 +1,13 @@
 import React from 'react';
-import EmployeeRegistrationFormComponent from './../../components/employees/registration.form';
+import EmployeeRegistrationFormComponent from '../../components/employees-registration/registration.form';
+
 export default class DashboardView extends React.Component {
+
     render() {
         return (
-            <section>
+            <React.Fragment>
                 <EmployeeRegistrationFormComponent></EmployeeRegistrationFormComponent>
-            </section>
+            </React.Fragment>
         )
     }
 }

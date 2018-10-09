@@ -6,7 +6,6 @@ import purple from '@material-ui/core/colors/purple';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 
 const theme = createMuiTheme({
-
   palette: {
     primary: {
       main: '#212121',
@@ -17,15 +16,20 @@ const theme = createMuiTheme({
 
 class App extends Component {
 
+  componentDidMount() {
+    
+  };
+
   render() {
 
     return (
       <div className="App">
-        <MuiThemeProvider  theme={theme}>
+        <MuiThemeProvider theme={theme}>
           <MiniDrawer></MiniDrawer>
         </MuiThemeProvider>
       </div>
     );
+    
   }
 }
 
