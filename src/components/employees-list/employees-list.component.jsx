@@ -21,13 +21,13 @@ export class EmployeesListComponent extends React.Component {
     state = {
         checked: [0],
         selectedEmployees: [],
-        employees: []
+        employeesList: []
     };
 
 
     async componentDidMount() {
         this.setState({
-            employees: this.props.employees
+            employeesList: this.props.employees
         }, () => {
             console.log('employees async state:', this.state);
         });
@@ -55,9 +55,8 @@ export class EmployeesListComponent extends React.Component {
             <div className={classes.root}>
                 <List>
                     {
-                        this.props.employees.map((employee, index) => (
+                        this.state.employeesList.map((employee, index) => (
                             <ListItem key={index} role={undefined} dense button onClick={() => this.handleToggle(employee, index)} >
-
 
                                 {`${index + 1}.`} <Checkbox checked={this.state.checked.indexOf(index) !== -1} tabIndex={-1} disableRipple />
 

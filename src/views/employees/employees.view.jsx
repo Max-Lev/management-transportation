@@ -45,7 +45,6 @@ export class EmployeesView extends React.Component {
                         <EmployeesListComponent employees={this.state.employees}></EmployeesListComponent>
                     </React.Fragment>
                 }
-
             </React.Fragment>
         )
     }

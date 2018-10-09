@@ -1,0 +1,38 @@
+{
+    "Companies": [
+        {
+            "Category": "Wood",
+            "Companies": [
+                {
+                    "companyName": "North Wood"
+                },
+                {
+                    "companyName": "South Wood"
+                },
+                {
+                    "companyName": "Nature Wood"
+                },
+                {
+                    "companyName": "Premium Wood"
+                }
+            ]
+        },
+        {
+            "Category": "Wheels",
+            "Companies": [
+                {
+                    "companyName": "Michelean"
+                },
+                {
+                    "companyName": "Danlop"
+                },
+                {
+                    "companyName": "Yokahoma"
+                },
+                {
+                    "companyName": "Pereally"
+                }
+            ]
+        }
+    ]
+}
